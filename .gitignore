@@ -1,6 +1,8 @@
 .DS_Store
 ./node_modules
 ./tpl/node_modules
+/node_modules
+/tpl/node_modules
 /dist
 */dist
 package-lock.json

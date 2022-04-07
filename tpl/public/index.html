@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #widget_container > div {
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="container">
+    <div id="app"></div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script>
+    var cacheWidgets = []
+    function exportWidget(widgetOptions) {
+      cacheWidgets.push(widgetOptions)
+
+      initWidget(cacheWidgets[0])
+    }
+
+    function initWidget(widgetOptions) {
+      new Vue(widgetOptions).$mount('#app')
+    }
+  </script>
+</body>
+
+</html>
